@@ -5,15 +5,15 @@
 
 <form name="pickColor">
     <p>
-        <input type="checkbox" name="color" value="yellow" onclick="return ColorCount()" />Yellow<br />
-        <input type="checkbox" name="color" value="black" onclick="return ColorCount()" />Black<br />
-        <input type="checkbox" name="color" value="white" onclick="return ColorCount()" />White<br />
-        <input type="checkbox" name="color" value="green" onclick="return ColorCount()" />Green<br />
-        <input type="checkbox" name="color" value="blue" onclick="return ColorCount()" />Blue<br />
-        <input type="checkbox" name="color" value="purple" onclick="return ColorCount()" />Purple<br />
-        <input type="checkbox" name="color" value="pink" onclick="return ColorCount()" />Pink<br />
-        <input type="checkbox" name="color" value="red" onclick="return ColorCount()" />Red<br />
-        <input type="checkbox" name="color" value="orange" onclick="return ColorCount()" />Orange<br />
+        <input type="checkbox" name="yellow" value="yellow" onclick="return ColorCount()" />Yellow<br />
+        <input type="checkbox" name="black" value="black" onclick="return ColorCount()" />Black<br />
+        <input type="checkbox" name="white" value="white" onclick="return ColorCount()" />White<br />
+        <input type="checkbox" name="green" value="green" onclick="return ColorCount()" />Green<br />
+        <input type="checkbox" name="blue" value="blue" onclick="return ColorCount()" />Blue<br />
+        <input type="checkbox" name="purple" value="purple" onclick="return ColorCount()" />Purple<br />
+        <input type="checkbox" name="pink" value="pink" onclick="return ColorCount()" />Pink<br />
+        <input type="checkbox" name="red" value="red" onclick="return ColorCount()" />Red<br />
+        <input type="checkbox" name="orange" value="orange" onclick="return ColorCount()" />Orange<br />
     </p>
 </form>
 
@@ -45,28 +45,38 @@
 <script type="text/javascript">
     function ColorCount() {
         var Count = 0
-        if (document.pickColor.red.checked) {
-            count++
-        }
-        if (document.pickColor.blue.checked) {
-            count++
-        }
-        if (document.pickColor.green.checked) {
-            count++
-        } if (document.pickColor.white.checked) {
-            count++
+
+        if (document.pickColor.yellow.checked) {
+            count = count + 1
         }
         if (document.pickColor.black.checked) {
-            count++
+            count = count + 1
+        }
+        if (document.pickColor.white.checked) {
+            count = count + 1
+        }
+        if (document.pickColor.green.checked) {
+            count = count + 1
+        }
+        if (document.pickColor.blue.checked) {
+            count = count + 1
+        }
+        if (document.pickColor.purple.checked) {
+            count = count + 1
+        }
+        if (document.pickColor.pink.checked) {
+            count = count + 1
+        }
+        if (document.pickColor.red.checked) {
+            count = count + 1
         }
         if (document.pickColor.orange.checked) {
-            count++
+            count = count + 1
         }
 
         if (Count > 3) {
             alert('Pick up to 3 colors')
             document.pickcolor; return false;
         }
-
     }
 </script>

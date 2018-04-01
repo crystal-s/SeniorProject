@@ -1,28 +1,33 @@
 ﻿<h2>@ViewBag.Title</h2>
+<form name="useroutput">
+    <p>
+        @*write script to populate data here*@
+        Number of Bees Identified:
+        <output name="BeesIdentified" readonly="true"></output>
+    </p>
 
-<p>
-    @*write script to populate data here*@
-    Number of Bees Identified:
+    <p>
+        Number of Species Identified: 
+        <output name="IdentifiedSpecies"></output>
+    </p>
 
-</p>
-<p>
-    Number of Species Identified: 
+    <p>
+        Locations:
+        <output name="Locations"></output>
+    </p>
 
-</p>
-<p>
-    Locations:
+    <p>
+        Overall Days:
+        <output name="OverallViewDays"></output>
+    </p>
 
-</p>
+</form>
 <p>
-    Overall Days:
-
-</p>
-<p>
-@*buttons for species list, locations, and both*@
+    @*buttons for species list, locations, and both*@
 </p>
 
 <script type="text/javascript">
-  {
-      //fill in the data from the database for the user. 
-  };
+    {
+        //fill in the data from the database for the user.
+    };
 </script>
