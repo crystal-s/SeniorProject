@@ -1,6 +1,6 @@
-﻿<p>
+﻿<h3>
     Let's get some basic preliminary information. This will help us narrow down what you saw.
-</p>
+</h3>
 
 <form>
     <p>
@@ -18,25 +18,39 @@
         Did what you saw have six legs?
 
         <label class="radio-inline"><input type="radio" name="SixLegs">Yes</label>
-        <label class="radio-inline"><input type="radio" name="NotSixLegs">No</label>
+        <label class="radio-inline"><input type="radio" name="SixLegs">No</label>
     </p>
 
     <p>
         Did what you saw have wings?
 
         <label class="radio-inline"><input type="radio" name="Wings">Yes</label>
-        <label class="radio-inline"><input type="radio" name="NoWings">No</label>
+        <label class="radio-inline"><input type="radio" name="Wings">No</label>
     </p>
 
     <p>
         Is it fuzzy?
 
         <label class="radio-inline"><input type="radio" name="Fuzzy">Yes</label>
-        <label class="radio-inline"><input type="radio" name="NotFuzzy">No</label>
+        <label class="radio-inline"><input type="radio" name="Fuzzy">No</label>
     </p>
 </form> 
+
 <p>
     @*Navigation Buttons*@
 
+    <input type="button" value="Start Over" id="StartOverButton" />
+    <input type="button" value="Next" id="NextButton" />
 </p>
 
+<script type="text/javascript">
+    document.getElementById("NextButton").onclick = function () {
+        location.href = "/Sighting/Colors";
+    };
+</script>
+
+<script type="text/javascript">
+    document.getElementById("StartOverButton").onclick = function () {
+        location.href = "/Sighting/BasicInfo";
+    };
+</script>

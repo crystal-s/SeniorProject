@@ -8,6 +8,7 @@
         public string FirstColor { get; set; }
         public string SecondColor { get; set; }
         public string ThirdColor { get; set; }
+        public string FourthColor { get; set; }
         public bool Fuzzy { get; set; }
     }
 }

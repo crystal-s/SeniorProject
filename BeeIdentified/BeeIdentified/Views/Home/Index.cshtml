@@ -5,10 +5,22 @@
 
 <p>
     @*should redirect to sighting/basicinfo*@
-    <input type="button" value="I Saw Something!" />
+    <input type="button" value="I Saw Something!" id="SawSomethingButton" />
 </p>
 
 <p>
     @*should redirect to user/history*@
-    <input type="button" value="My History" />
+    <input type="button" value="My History" id="HistoryButton" />
 </p>
+
+<script type="text/javascript">
+    document.getElementById("SawSomethingButton").onclick = function () {
+        location.href = "/sighting/basicinfo";
+    };
+</script>
+
+<script type="text/javascript">
+    document.getElementById("HistoryButton").onclick = function () {
+        location.href = "/user/history";
+    };
+</script>

@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeeIdentified", "BeeIdentified\BeeIdentified.csproj", "{682D27D2-B14B-4F6C-8697-AD7A7BFC7487}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeeIdentified", "BeeIdentified\BeeIdentified.csproj", "{5CB9B7FD-9E94-49BC-A417-D369BCB9352E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeeIdentified.Tests", "BeeIdentified.Tests\BeeIdentified.Tests.csproj", "{823FB182-6B4D-4D9E-BA60-EC62408DD002}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{682D27D2-B14B-4F6C-8697-AD7A7BFC7487}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{682D27D2-B14B-4F6C-8697-AD7A7BFC7487}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{682D27D2-B14B-4F6C-8697-AD7A7BFC7487}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{682D27D2-B14B-4F6C-8697-AD7A7BFC7487}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CB9B7FD-9E94-49BC-A417-D369BCB9352E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CB9B7FD-9E94-49BC-A417-D369BCB9352E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CB9B7FD-9E94-49BC-A417-D369BCB9352E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CB9B7FD-9E94-49BC-A417-D369BCB9352E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{823FB182-6B4D-4D9E-BA60-EC62408DD002}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{823FB182-6B4D-4D9E-BA60-EC62408DD002}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{823FB182-6B4D-4D9E-BA60-EC62408DD002}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{823FB182-6B4D-4D9E-BA60-EC62408DD002}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

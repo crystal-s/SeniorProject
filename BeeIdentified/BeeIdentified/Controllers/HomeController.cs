@@ -30,18 +30,5 @@ namespace BeeIdentified.Controllers
 
             return View();
         }
-
-        public ActionResult Login()
-        {
-            ViewBag.Title = "Log In!";
-
-            return View();
-        }
-        public ActionResult SignUp()
-        {
-            ViewBag.Title = "Create a New Account!";
-
-            return View();
-        }
     }
 }
