@@ -1,0 +1,28 @@
+﻿<h3>
+    Does this look like the bee you saw?
+</h3>
+
+<p>
+    @*Navigation Buttons*@
+    <input type="button" value="Start Over" id="StartOverButton" />
+    <input type="button" value="Back" id="BackButton" />
+    <input type="button" value="This was it!" id="SelectBee" />
+</p>
+
+<script type="text/javascript">
+    document.getElementById("BackButton").onclick = function () {
+        location.href = "/Sighting/Colors";
+    };
+</script>
+
+<script type="text/javascript">
+    document.getElementById("StartOverButton").onclick = function () {
+        location.href = "/Sighting/BasicInfo";
+    };
+</script>
+
+<script type="text/javascript">
+    document.getElementById("SelectBee").onclick = function () {
+        location.href = "/User/History";
+    };
+</script>

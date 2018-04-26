@@ -1,0 +1,30 @@
+﻿<h3>
+    Anything looking familiar? Select an image to get a better view. <br>
+    Let us know when you've found your match. If nothing looks right, you can edit the selections or start over.
+</h3>
+
+<p>
+    @* Bee List *@
+
+    @* Image *@
+    @* Latin Name *@
+    @* Common Name *@
+</p>
+
+<p>
+    @*Navigation Buttons*@
+    <input type="button" value="Start Over" id="StartOverButton" />
+    <input type="button" value="Back" id="BackButton" />
+</p>
+
+<script type="text/javascript">
+    document.getElementById("BackButton").onclick = function () {
+        location.href = "/Sighting/Colors";
+    };
+</script>
+
+<script type="text/javascript">
+    document.getElementById("StartOverButton").onclick = function () {
+        location.href = "/Sighting/BasicInfo";
+    };
+</script>

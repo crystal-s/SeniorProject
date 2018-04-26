@@ -1,0 +1,57 @@
+﻿<h3>
+    Let's get some basic preliminary information. This will help us narrow down what you saw.
+</h3>
+
+<form>
+    <p>
+        <div class="form-group">
+            <label for="SeenDate">Date you saw this:</label>
+            <input type="date" class="form-control" id="SeenDate">
+        </div>
+        <div class="form-group">
+            <label for="SeenLocation">Location you saw this:</label>
+            <input type="text" class="form-control" id="SeenLocation">
+        </div>
+    </p>
+
+    <p>
+        Did what you saw have six legs?
+
+        <label class="radio-inline"><input type="radio" name="SixLegs">Yes</label>
+        <label class="radio-inline"><input type="radio" name="SixLegs">No</label>
+    </p>
+
+    <p>
+        Did what you saw have wings?
+
+        <label class="radio-inline"><input type="radio" name="Wings">Yes</label>
+        <label class="radio-inline"><input type="radio" name="Wings">No</label>
+    </p>
+
+    <p>
+        Is it fuzzy?
+
+        <label class="radio-inline"><input type="radio" name="Fuzzy">Yes</label>
+        <label class="radio-inline"><input type="radio" name="Fuzzy">No</label>
+    </p>
+</form> 
+
+<p>
+    @*Navigation Buttons*@
+    <input type="button" value="Start Over" id="StartOverButton" />
+    <input type="button" value="Next" id="NextButton" />
+</p>
+
+@* Need script to ensure that all fields are filled out. Need to make sure it's a bee. *@
+
+<script type="text/javascript">
+    document.getElementById("NextButton").onclick = function () {
+        location.href = "/Sighting/Colors";
+    };
+</script>
+
+<script type="text/javascript">
+    document.getElementById("StartOverButton").onclick = function () {
+        location.href = "/Sighting/BasicInfo";
+    };
+</script>
