@@ -5,15 +5,15 @@
 
 <form name="pickColor">
     <p>
-        <input type="checkbox" name="yellow" value="yellow" onclick="return ColorCount()" />Yellow<br />
-        <input type="checkbox" name="black" value="black" onclick="return ColorCount()" />Black<br />
-        <input type="checkbox" name="white" value="white" onclick="return ColorCount()" />White<br />
-        <input type="checkbox" name="green" value="green" onclick="return ColorCount()" />Green<br />
-        <input type="checkbox" name="blue" value="blue" onclick="return ColorCount()" />Blue<br />
-        <input type="checkbox" name="purple" value="purple" onclick="return ColorCount()" />Purple<br />
-        <input type="checkbox" name="pink" value="pink" onclick="return ColorCount()" />Pink<br />
-        <input type="checkbox" name="red" value="red" onclick="return ColorCount()" />Red<br />
-        <input type="checkbox" name="orange" value="orange" onclick="return ColorCount()" />Orange<br />
+        <input type="checkbox" name="yellow" value="yellow" />Yellow<br />
+        <input type="checkbox" name="black" value="black" />Black<br />
+        <input type="checkbox" name="white" value="white" />White<br />
+        <input type="checkbox" name="green" value="green" />Green<br />
+        <input type="checkbox" name="blue" value="blue" />Blue<br />
+        <input type="checkbox" name="purple" value="purple" />Purple<br />
+        <input type="checkbox" name="pink" value="pink" />Pink<br />
+        <input type="checkbox" name="red" value="red" />Red<br />
+        <input type="checkbox" name="orange" value="orange" />Orange<br />
     </p>
 </form>
 
@@ -21,31 +21,21 @@
     @*Navigation Buttons*@
     <input type="button" value="Start Over" id="StartOverButton" />
     <input type="button" value="Back" id="BackButton" />
-    <input type="button" value="Next" id="NextButton"/>
+    <input type="button" value="Next" id="NextButton" />
 </p>
-
-
-@*<script type="text/javascript">
-    document.getElementById("NextButton").onclick = function () {
-        location.href = "/Sighting/PossibleMatches";
-    };
-</script>*@
 
 <script type="text/javascript">
     document.getElementById("BackButton").onclick = function () {
         location.href = "/Sighting/BasicInfo";
     };
-</script>
 
-<script type="text/javascript">
+
     document.getElementById("StartOverButton").onclick = function () {
         location.href = "/Sighting/BasicInfo";
     };
-</script>
 
-<script type="text/javascript">
     document.getElementById("NextButton").onclick = function () {
-        var Count = 0
+        var count = 0
 
         if (document.pickColor.yellow.checked) {
             count = count + 1
@@ -75,11 +65,17 @@
             count = count + 1
         }
 
-        if (Count > 3) {
+        if (count > 3) {
             alert('Pick up to 3 colors')
-            document.pickcolor; return false;
+            return
         }
-        
-        location.href = "/Sighting/PossibleMatches";
+
+    if(count < 1)    {
+        alert('Choose at least 1 color!')
+        return
     }
+
+    location.href = "/Sighting/PossibleMatches";
+    }
+
 </script>

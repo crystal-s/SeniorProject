@@ -3,6 +3,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using BeeIdentified.Data;
 
 namespace BeeIdentified.Models
 {
@@ -25,9 +26,17 @@ namespace BeeIdentified.Models
         {
         }
 
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<UserBees>().HasKey(k => new { k.UserID, k.BeeID });
+        }
+
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<BeeIdentified.Data.Entities.BeeData> BeeDatas { get; set; }
     }
 }

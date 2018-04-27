@@ -79,3 +79,8 @@ C:\Users\Crystal\Desktop\College\OIT\Sr. Project\SeniorProject\BeeIdentified\Bee
 C:\Users\Crystal\Desktop\College\OIT\Sr. Project\SeniorProject\BeeIdentified\BeeIdentified\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\Crystal\Desktop\College\OIT\Sr. Project\SeniorProject\BeeIdentified\BeeIdentified\obj\Debug\BeeIdentified.dll
 C:\Users\Crystal\Desktop\College\OIT\Sr. Project\SeniorProject\BeeIdentified\BeeIdentified\obj\Debug\BeeIdentified.pdb
+C:\Users\Crystal\Desktop\College\OIT\Sr. Project\SeniorProject\BeeIdentified\BeeIdentified\obj\Debug\BeeIdentified.Migrations.InitialCreate.resources
+C:\Users\Crystal\Desktop\College\OIT\Sr. Project\SeniorProject\BeeIdentified\BeeIdentified\obj\Debug\BeeIdentified.csproj.GenerateResource.Cache
+C:\Users\Crystal\Desktop\College\OIT\Sr. Project\SeniorProject\BeeIdentified\BeeIdentified\obj\Debug\BeeIdentified.csprojResolveAssemblyReference.cache
+C:\Users\Crystal\Desktop\College\OIT\Sr. Project\SeniorProject\BeeIdentified\BeeIdentified\obj\Debug\BeeIdentified.Migrations.migration1.resources
+C:\Users\Crystal\Desktop\College\OIT\Sr. Project\SeniorProject\BeeIdentified\BeeIdentified\obj\Debug\BeeIdentified.Migrations.Migration2.resources
