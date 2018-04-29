@@ -10,6 +10,76 @@
     @* Latin Name *@
     @* Common Name *@
     @* This is my bee -> grab the Location data right now *@
+
+    @* Don't forget to format me in a css file!! *@
+    <table>
+
+        <tr>
+            <th></th>
+
+            <th>
+                This is my Bee!
+            </th>
+
+            <th>
+                Bee Image
+            </th>
+
+            <th>
+                Common Name
+            </th>
+
+            <th>
+                Latin Name
+            </th>
+
+            <th>
+                Conservation Status
+            </th>
+
+            <th>
+                Color One
+            </th>
+
+            <th>
+                Color Two
+            </th>
+
+            <th>
+                Color Three
+            </th>
+
+            <th>
+                Fuzzy?
+            </th>
+            @*<th>
+             More Info
+            </th>
+
+
+            <% foreach (var item in Model) { %>
+
+        <tr>
+
+            <td>
+                Add radio button or button 
+            </td>
+
+            <td>
+                <%= Html.Encode(item.Id) %>
+            </td>
+
+            <td>
+                <%= Html.Encode(item.Title) %>
+            </td>
+
+        </tr>
+
+
+        <% } %>
+         *@
+    </table>
+
 </p>
 
 <p>

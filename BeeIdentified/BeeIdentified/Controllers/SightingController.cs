@@ -1,4 +1,5 @@
-﻿using System.Web.Mvc;
+﻿using BeeIdentified.Data.Entities;
+using System.Web.Mvc;
 
 namespace BeeIdentified.Controllers
 {
@@ -23,6 +24,9 @@ namespace BeeIdentified.Controllers
         }
         public ActionResult PossibleMatches()
         {
+            // Give the view the information from the database
+            //var BeeInfo = new 
+
             return View();
         }
 

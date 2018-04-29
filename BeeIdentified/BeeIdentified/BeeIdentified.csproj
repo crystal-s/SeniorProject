@@ -286,7 +286,7 @@
     <Content Include="Views\User\History.cshtml" />
     <Content Include="Views\User\UserBeeList.cshtml" />
     <Content Include="Views\Sighting\BeeInfoPage.cshtml" />
-    <Content Include="Views\Sighting\View.cshtml" />
+    <Content Include="Views\GenericError.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
