@@ -13,6 +13,7 @@ namespace BeeIdentified.Data.Entities
         public Color SecondColor { get; set; }
         public Color ThirdColor { get; set; }
         public bool Fuzzy { get; set; }
+        public byte[] Photo { get; set; }
     }
 
     // enums with Bee info

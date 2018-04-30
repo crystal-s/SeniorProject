@@ -24,10 +24,19 @@
 </form>
 <p>
     @*buttons for species list, locations, and both*@
+
+    @*Navigation Buttons*@
+    <input type="button" value="Discover More Bees" id="NewBeeButton" />
 </p>
 
 <script type="text/javascript">
     {
         //fill in the data from the database for the user.
     };
+
+    document.getElementById("NewBeeButton").onclick = function () {
+        location.href = "/Sighting/BasicInfo";
+    };
+
+
 </script>

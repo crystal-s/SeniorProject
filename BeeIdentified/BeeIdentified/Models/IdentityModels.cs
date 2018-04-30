@@ -29,6 +29,7 @@ namespace BeeIdentified.Models
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+            Database.SetInitializer(new AppDbInitializer());
             modelBuilder.Entity<UserBees>().HasKey(k => new { k.UserID, k.BeeID });
         }
 
@@ -36,7 +37,13 @@ namespace BeeIdentified.Models
         {
             return new ApplicationDbContext();
         }
+        
 
         public System.Data.Entity.DbSet<BeeIdentified.Data.Entities.BeeData> BeeDatas { get; set; }
+
+        public class AppDbInitializer : DropCreateDatabaseIfModelChanges<ApplicationDbContext>
+        {
+            // Left Blank
+        }
     }
 }

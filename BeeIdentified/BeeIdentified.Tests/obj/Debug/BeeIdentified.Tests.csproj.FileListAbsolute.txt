@@ -54,3 +54,7 @@ C:\Users\Crystal\Desktop\College\OIT\Sr. Project\SeniorProject\BeeIdentified\Bee
 C:\Users\Crystal\Desktop\College\OIT\Sr. Project\SeniorProject\BeeIdentified\BeeIdentified.Tests\obj\Debug\BeeIdentified.Tests.csprojResolveAssemblyReference.cache
 C:\Users\Crystal\Desktop\College\OIT\Sr. Project\SeniorProject\BeeIdentified\BeeIdentified.Tests\obj\Debug\BeeIdentified.Tests.dll
 C:\Users\Crystal\Desktop\College\OIT\Sr. Project\SeniorProject\BeeIdentified\BeeIdentified.Tests\obj\Debug\BeeIdentified.Tests.pdb
+C:\Users\Crystal\Desktop\College\OIT\Sr. Project\SeniorProject\BeeIdentified\BeeIdentified.Tests\bin\Debug\System.Web.Http.dll
+C:\Users\Crystal\Desktop\College\OIT\Sr. Project\SeniorProject\BeeIdentified\BeeIdentified.Tests\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\Crystal\Desktop\College\OIT\Sr. Project\SeniorProject\BeeIdentified\BeeIdentified.Tests\bin\Debug\System.Web.Http.xml
+C:\Users\Crystal\Desktop\College\OIT\Sr. Project\SeniorProject\BeeIdentified\BeeIdentified.Tests\bin\Debug\System.Net.Http.Formatting.xml

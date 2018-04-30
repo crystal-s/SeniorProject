@@ -34,7 +34,7 @@
         <label class="radio-inline"><input type="radio" name="Fuzzy">Yes</label>
         <label class="radio-inline"><input type="radio" name="Fuzzy">No</label>
     </p>
-</form> 
+</form>
 
 <p>
     @*Navigation Buttons*@
@@ -46,12 +46,27 @@
 
 <script type="text/javascript">
     document.getElementById("NextButton").onclick = function () {
+
+        //var wings = document.getElementsByName("Wings");
+        //var SelectedWings;
+        //for (var i = 0; i < wings.length; i++) {
+        //    if (wings[i].checked) {
+        //        SelectedWings = wings[i].value;
+        //    }
+        //}
+
+        var wings = document.querySelector('input[name="Wings"]:checked').value
+        if (wings != 'yes')
+        {
+            alert('It looks like it is not an insect');
+            return;
+        }
+
         location.href = "/Sighting/Colors";
     };
-</script>
 
-<script type="text/javascript">
     document.getElementById("StartOverButton").onclick = function () {
         location.href = "/Sighting/BasicInfo";
     };
+
 </script>

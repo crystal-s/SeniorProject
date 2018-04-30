@@ -80,12 +80,24 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
@@ -195,6 +207,7 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -205,13 +218,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201804012109092_InitialCreate.cs" />
-    <Compile Include="Migrations\201804012109092_InitialCreate.Designer.cs">
-      <DependentUpon>201804012109092_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201804271647237_Migration2.cs" />
-    <Compile Include="Migrations\201804271647237_Migration2.Designer.cs">
-      <DependentUpon>201804271647237_Migration2.cs</DependentUpon>
+    <Compile Include="Migrations\201804302119039_beeinfo.cs" />
+    <Compile Include="Migrations\201804302119039_beeinfo.Designer.cs">
+      <DependentUpon>201804302119039_beeinfo.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -227,6 +236,11 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Photos\Osmia1.jpg" />
+    <Content Include="Photos\Osmia2.jpg" />
+    <Content Include="Photos\Triepeolus Concavus.jpg" />
+    <Content Include="Photos\Triepeolus Concavus2.jpg" />
+    <Content Include="Photos\WesternBumbleBee.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -286,7 +300,7 @@
     <Content Include="Views\User\History.cshtml" />
     <Content Include="Views\User\UserBeeList.cshtml" />
     <Content Include="Views\Sighting\BeeInfoPage.cshtml" />
-    <Content Include="Views\GenericError.cshtml" />
+    <Content Include="Views\User\GenericError.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -300,11 +314,8 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201804012109092_InitialCreate.resx">
-      <DependentUpon>201804012109092_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201804271647237_Migration2.resx">
-      <DependentUpon>201804271647237_Migration2.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201804302119039_beeinfo.resx">
+      <DependentUpon>201804302119039_beeinfo.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

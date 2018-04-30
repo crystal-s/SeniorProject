@@ -1,10 +1,15 @@
 ﻿using BeeIdentified.Data.Entities;
+using BeeIdentified.Models;
+using System.Linq;
 using System.Web.Mvc;
 
 namespace BeeIdentified.Controllers
 {
+    [Authorize]
     public class SightingController : Controller
     {
+        private readonly ApplicationDbContext context = new ApplicationDbContext();
+        
         // GET: Bee
         public ActionResult BasicInfo()
         {
@@ -22,11 +27,16 @@ namespace BeeIdentified.Controllers
         {
             return View();
         }
+
         public ActionResult PossibleMatches()
         {
-            // Give the view the information from the database
-            //var BeeInfo = new 
+            var beeinfo = context.BeeDatas.ToList();
+            
+            return View(beeinfo);
+        }
 
+        public ActionResult Create()
+        {
             return View();
         }
 

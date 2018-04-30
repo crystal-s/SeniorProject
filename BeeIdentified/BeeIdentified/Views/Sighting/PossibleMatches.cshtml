@@ -1,6 +1,8 @@
-﻿<h3>
-    Anything looking familiar? Select an image to get a better view. <br>
-    Let us know when you've found your match. If nothing looks right, you can edit the selections or start over.
+﻿@model IEnumerable<BeeIdentified.Data.Entities.BeeData>
+
+<h3>
+    Select an image to get a better view. <br>
+    If nothing looks right, you can edit the selections or start over.
 </h3>
 
 <p>
@@ -12,73 +14,71 @@
     @* This is my bee -> grab the Location data right now *@
 
     @* Don't forget to format me in a css file!! *@
-    <table>
+    <table class="table">
 
-        <tr>
-            <th></th>
+        <thead>
+            <tr>
+                <th></th>
 
-            <th>
-                This is my Bee!
-            </th>
+                <th>
+                    This is my Bee!
+                </th>
 
-            <th>
-                Bee Image
-            </th>
+                <th>
+                    Bee Image
+                </th>
 
-            <th>
-                Common Name
-            </th>
+                <th>
+                    Common Name
+                </th>
 
-            <th>
-                Latin Name
-            </th>
+                <th>
+                    Latin Name
+                </th>
 
-            <th>
-                Conservation Status
-            </th>
+                <th>
+                    Conservation Status
+                </th>
 
-            <th>
-                Color One
-            </th>
+                <th>
+                    Color One
+                </th>
 
-            <th>
-                Color Two
-            </th>
+                <th>
+                    Color Two
+                </th>
 
-            <th>
-                Color Three
-            </th>
+                <th>
+                    Color Three
+                </th>
 
-            <th>
-                Fuzzy?
-            </th>
-            @*<th>
-             More Info
-            </th>
+                <th>
+                    Fuzzy?
+                </th>
+                <th>
+                    More Info
+                </th>
+        </thead>
+        <tbody>
 
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td></td>
 
-            <% foreach (var item in Model) { %>
+                <td>@item.BeeID</td>
 
-        <tr>
+                <td>@item.CommonName</td>
 
-            <td>
-                Add radio button or button 
-            </td>
-
-            <td>
-                <%= Html.Encode(item.Id) %>
-            </td>
-
-            <td>
-                <%= Html.Encode(item.Title) %>
-            </td>
-
-        </tr>
+            </tr>
 
 
-        <% } %>
-         *@
+        }
+            </tbody>
+
     </table>
+
+
 
 </p>
 
@@ -97,5 +97,11 @@
 <script type="text/javascript">
     document.getElementById("StartOverButton").onclick = function () {
         location.href = "/Sighting/BasicInfo";
+    };
+</script>
+
+<script type="text/javascript">
+    document.getElementById("ThisIsItButton").onclick = function () {
+        location.href = "/Sighting/";
     };
 </script>
