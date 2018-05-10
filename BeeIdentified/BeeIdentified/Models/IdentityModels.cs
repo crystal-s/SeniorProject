@@ -3,7 +3,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
-using BeeIdentified.Data;
+using BeeIdentified.Data.Entities;
 
 namespace BeeIdentified.Models
 {
@@ -38,8 +38,8 @@ namespace BeeIdentified.Models
             return new ApplicationDbContext();
         }
         
-
         public System.Data.Entity.DbSet<BeeIdentified.Data.Entities.BeeData> BeeDatas { get; set; }
+        public System.Data.Entity.DbSet<BeeIdentified.Data.Entities.UserBees> UserBees { get; set; }
 
         public class AppDbInitializer : DropCreateDatabaseIfModelChanges<ApplicationDbContext>
         {

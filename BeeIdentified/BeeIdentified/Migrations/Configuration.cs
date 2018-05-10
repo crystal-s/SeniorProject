@@ -28,17 +28,17 @@ namespace BeeIdentified.Migrations
 
             context.BeeDatas.AddOrUpdate(
                 b => b.BeeID,
-                new BeeData { BeeID = "1", CommonName = "Bumblebee", LatinName = "Bombus", ConservationStatus = ConservationStatus.Endangered, FirstColor = Color.Black, SecondColor = Color.Yellow, Fuzzy = true },
+                new BeeData { BeeID = "1", CommonName = "Bumblebee", LatinName = "Bombus", ConservationStatus = ConservationStatus.Endangered, FirstColor = Color.Black, SecondColor = Color.Yellow, Fuzzy = true},
 
                 new BeeData { BeeID = "2", CommonName = "Yellow Faced Bumblebee", LatinName = "Bombus vosnesenskii", ConservationStatus = ConservationStatus.LeastConcern, FirstColor = Color.Black, SecondColor = Color.Yellow, Fuzzy = true },
 
                 new BeeData { BeeID = "3", CommonName = "Black Tailed Bumblebee / Orange Rumped Bumblebee", LatinName = "Bombus melanopygus", ConservationStatus = ConservationStatus.LeastConcern, FirstColor = Color.Black, SecondColor = Color.Yellow, ThirdColor = Color.Orange, Fuzzy = true },
 
-                new BeeData { BeeID = "4", CommonName = "Western Bumblebee", LatinName = "Bombus occidentalis", ConservationStatus = ConservationStatus.Vulnerable, FirstColor = Color.Black, SecondColor = Color.Yellow, ThirdColor = Color.White, Fuzzy = true}, 
+                new BeeData { BeeID = "4", CommonName = "Western Bumblebee", LatinName = "Bombus occidentalis", ConservationStatus = ConservationStatus.Vulnerable, FirstColor = Color.Black, SecondColor = Color.Yellow, ThirdColor = Color.White, Fuzzy = true, Photo="/Photo/WesternBumbleBee.jpg"},
 
-                new BeeData { BeeID = "5", CommonName = "Mason Bee", LatinName = "Osmia", FirstColor = Color.Blue, SecondColor = Color.Green, ThirdColor = Color.Black, Fuzzy = true },
+                new BeeData { BeeID = "5", CommonName = "Mason Bee", LatinName = "Osmia", FirstColor = Color.Blue, SecondColor = Color.Green, ThirdColor = Color.Black, Fuzzy = true, Photo="/Photo/Osmia2.jpg"},
 
-                new BeeData { BeeID = "6", CommonName = "Blue Orchard Mason Bee", LatinName = "Osmia lignaria", FirstColor = Color.Black, SecondColor = Color.Blue, Fuzzy = true },
+                new BeeData { BeeID = "6", CommonName = "Blue Orchard Mason Bee", LatinName = "Osmia lignaria", FirstColor = Color.Black, SecondColor = Color.Blue, Fuzzy = true, Photo = "/Photos/Osmia2.jpg"},
 
                 new BeeData { BeeID = "7", CommonName = "Sweat Bee", LatinName = "Lasioglossum", FirstColor = Color.Black, SecondColor = Color.Yellow, ThirdColor = Color.Brown, Fuzzy = false },
 
@@ -52,13 +52,18 @@ namespace BeeIdentified.Migrations
 
                 new BeeData { BeeID = "12", CommonName = "Silver-Tailed Petalcutter", LatinName = "Megachile montivaga", FirstColor = Color.Black, SecondColor = Color.White, ThirdColor = Color.Yellow, Fuzzy = true },
 
-                new BeeData { BeeID = "13", CommonName = "Cuckoo Bee", LatinName = "Triepeolus concavus", FirstColor = Color.Black, SecondColor = Color.Yellow, ThirdColor = Color.Yellow, Fuzzy = false}
+                new BeeData { BeeID = "13", CommonName = "Cuckoo Bee", LatinName = "Triepeolus concavus", FirstColor = Color.Black, SecondColor = Color.Yellow, ThirdColor = Color.Yellow, Fuzzy = false, Photo="/Photo/Triepeolus Concavus.jpg" }
 
                 // Template for new seed data
                 //new BeeData { BeeID = "14", CommonName = "", LatinName = "", ConservationStatus = ConservationStatus., FirstColor = Color.Black, SecondColor = Color, ThirdColor = Color, Fuzzy = },
 
                 );
 
+            context.UserBees.AddOrUpdate(
+                u => u.UserID,
+                new UserBees { UserID = "155f9026-a800-49ed-bbcf-b77c70bcfda2", BeeID = "2", Location = "Portland, OR" },
+                new UserBees { UserID = "155f9026-a800-49ed-bbcf-b77c70bcfda2", BeeID = "3", Location = "Bend, OR" }
+                );
         }
     }
 }

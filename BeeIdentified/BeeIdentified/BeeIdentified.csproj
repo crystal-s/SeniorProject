@@ -222,6 +222,14 @@
     <Compile Include="Migrations\201804302119039_beeinfo.Designer.cs">
       <DependentUpon>201804302119039_beeinfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201805062010067_SeedBeeUserInfo.cs" />
+    <Compile Include="Migrations\201805062010067_SeedBeeUserInfo.Designer.cs">
+      <DependentUpon>201805062010067_SeedBeeUserInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805062300193_ChangeBeeImages.cs" />
+    <Compile Include="Migrations\201805062300193_ChangeBeeImages.Designer.cs">
+      <DependentUpon>201805062300193_ChangeBeeImages.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -300,7 +308,7 @@
     <Content Include="Views\User\History.cshtml" />
     <Content Include="Views\User\UserBeeList.cshtml" />
     <Content Include="Views\Sighting\BeeInfoPage.cshtml" />
-    <Content Include="Views\User\GenericError.cshtml" />
+    <Content Include="Views\GenericError.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -316,6 +324,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201804302119039_beeinfo.resx">
       <DependentUpon>201804302119039_beeinfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805062010067_SeedBeeUserInfo.resx">
+      <DependentUpon>201805062010067_SeedBeeUserInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805062300193_ChangeBeeImages.resx">
+      <DependentUpon>201805062300193_ChangeBeeImages.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

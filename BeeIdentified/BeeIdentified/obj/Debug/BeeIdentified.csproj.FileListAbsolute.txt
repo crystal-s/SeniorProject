@@ -79,7 +79,6 @@ C:\Users\Crystal\Desktop\College\OIT\Sr. Project\SeniorProject\BeeIdentified\Bee
 C:\Users\Crystal\Desktop\College\OIT\Sr. Project\SeniorProject\BeeIdentified\BeeIdentified\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\Crystal\Desktop\College\OIT\Sr. Project\SeniorProject\BeeIdentified\BeeIdentified\obj\Debug\BeeIdentified.dll
 C:\Users\Crystal\Desktop\College\OIT\Sr. Project\SeniorProject\BeeIdentified\BeeIdentified\obj\Debug\BeeIdentified.pdb
-C:\Users\Crystal\Desktop\College\OIT\Sr. Project\SeniorProject\BeeIdentified\BeeIdentified\obj\Debug\BeeIdentified.csprojResolveAssemblyReference.cache
 C:\Users\Crystal\Desktop\College\OIT\Sr. Project\SeniorProject\BeeIdentified\BeeIdentified\bin\System.Net.Http.Formatting.dll
 C:\Users\Crystal\Desktop\College\OIT\Sr. Project\SeniorProject\BeeIdentified\BeeIdentified\bin\System.Web.Http.dll
 C:\Users\Crystal\Desktop\College\OIT\Sr. Project\SeniorProject\BeeIdentified\BeeIdentified\bin\System.Web.Http.WebHost.dll
@@ -88,3 +87,6 @@ C:\Users\Crystal\Desktop\College\OIT\Sr. Project\SeniorProject\BeeIdentified\Bee
 C:\Users\Crystal\Desktop\College\OIT\Sr. Project\SeniorProject\BeeIdentified\BeeIdentified\bin\System.Web.Http.WebHost.xml
 C:\Users\Crystal\Desktop\College\OIT\Sr. Project\SeniorProject\BeeIdentified\BeeIdentified\obj\Debug\BeeIdentified.Migrations.beeinfo.resources
 C:\Users\Crystal\Desktop\College\OIT\Sr. Project\SeniorProject\BeeIdentified\BeeIdentified\obj\Debug\BeeIdentified.csproj.GenerateResource.Cache
+C:\Users\Crystal\Desktop\College\OIT\Sr. Project\SeniorProject\BeeIdentified\BeeIdentified\obj\Debug\BeeIdentified.Migrations.SeedBeeUserInfo.resources
+C:\Users\Crystal\Desktop\College\OIT\Sr. Project\SeniorProject\BeeIdentified\BeeIdentified\obj\Debug\BeeIdentified.Migrations.ChangeBeeImages.resources
+C:\Users\Crystal\Desktop\College\OIT\Sr. Project\SeniorProject\BeeIdentified\BeeIdentified\obj\Debug\BeeIdentified.csprojResolveAssemblyReference.cache

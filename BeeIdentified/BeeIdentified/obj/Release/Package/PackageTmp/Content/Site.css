@@ -22,3 +22,17 @@ select,
 textarea {
     max-width: 280px;
 }
+
+input {
+min-height: 20px;
+min-width: 20px
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px dashed;
+    padding: 5px;
+}

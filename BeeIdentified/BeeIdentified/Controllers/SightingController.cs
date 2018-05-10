@@ -1,5 +1,4 @@
-﻿using BeeIdentified.Data.Entities;
-using BeeIdentified.Models;
+﻿using BeeIdentified.Models;
 using System.Linq;
 using System.Web.Mvc;
 

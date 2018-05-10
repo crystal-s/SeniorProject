@@ -1,4 +1,6 @@
-﻿<h2>@ViewBag.Title</h2>
+﻿@model IEnumerable<BeeIdentified.Data.Entities.UserBees>
+
+<h2>@ViewBag.Title</h2>
 <form name="useroutput">
     <p>
         @*write script to populate data here*@
@@ -7,36 +9,53 @@
     </p>
 
     <p>
-        Number of Species Identified: 
+        Number of Species Identified:
         <output name="IdentifiedSpecies"></output>
     </p>
 
     <p>
         Locations:
-        <output name="Locations"></output>
+        <output name="Locations"> </output>
     </p>
 
-    <p>
-        Overall Days:
-        <output name="OverallViewDays"></output>
-    </p>
+    @*<p>
+            Overall Days:
+            <output name="OverallViewDays"></output>
+        </p>*@
 
-</form>
-<p>
-    @*buttons for species list, locations, and both*@
-
-    @*Navigation Buttons*@
-    <input type="button" value="Discover More Bees" id="NewBeeButton" />
-</p>
-
-<script type="text/javascript">
+    @foreach (var item in Model)
     {
-        //fill in the data from the database for the user.
-    };
+        <p>
+            @item.UserID
+        </p>
+        <p>
+            @item.BeeID
+        </p>
+        <p>
+            @item.Location
+        </p>
+        <p>
+           @*@item*@
+        </p>
+    }
 
-    document.getElementById("NewBeeButton").onclick = function () {
-        location.href = "/Sighting/BasicInfo";
-    };
+    </form>
+    <p>
+        @*buttons for species list, locations, and both*@
+
+        @*Navigation Buttons*@
+
+        <input type="button" value="Discover More Bees" id="NewBeeButton" />
+    </p>
+
+    <script type="text/javascript">
+        {
+            //fill in the data from the database for the user.
+        };
+
+        document.getElementById("NewBeeButton").onclick = function () {
+            location.href = "/Sighting/BasicInfo";
+        };
 
 
-</script>
+    </script>

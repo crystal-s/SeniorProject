@@ -6,7 +6,7 @@
     <p>
         <div class="form-group">
             <label for="SeenDate">Date you saw this:</label>
-            <input type="date" class="form-control" id="SeenDate">
+            <input type="date" class="form-control" id="SeenDate" onload="date()" />
         </div>
         <div class="form-group">
             <label for="SeenLocation">Location you saw this:</label>
@@ -14,25 +14,25 @@
         </div>
     </p>
 
-    <p>
-        Did what you saw have six legs?
+    @*<p>
+            Did what you saw have six legs?
 
-        <label class="radio-inline"><input type="radio" name="SixLegs">Yes</label>
-        <label class="radio-inline"><input type="radio" name="SixLegs">No</label>
-    </p>
+            <label class="radio-inline"><input type="radio" name="SixLegs">Yes</label>
+            <label class="radio-inline"><input type="radio" name="SixLegs">No</label>
+        </p>
 
-    <p>
-        Did what you saw have wings?
+        <p>
+            Did what you saw have wings?
 
-        <label class="radio-inline"><input type="radio" name="Wings">Yes</label>
-        <label class="radio-inline"><input type="radio" name="Wings">No</label>
-    </p>
+            <label class="radio-inline"><input type="radio" name="Wings">Yes</label>
+            <label class="radio-inline"><input type="radio" name="Wings">No</label>
+        </p>*@
 
     <p>
         Is it fuzzy?
 
-        <label class="radio-inline"><input type="radio" name="Fuzzy">Yes</label>
-        <label class="radio-inline"><input type="radio" name="Fuzzy">No</label>
+        <label class="radio-inline"><input type="radio" name="Fuzzy" id="true">Yes</label>
+        <label class="radio-inline"><input type="radio" name="Fuzzy" id="false">No</label>
     </p>
 </form>
 
@@ -45,24 +45,46 @@
 @* Need script to ensure that all fields are filled out. Need to make sure it's a bee. *@
 
 <script type="text/javascript">
-    document.getElementById("NextButton").onclick = function () {
+    function date() {
+        var today = new Date();
+        var dd = today.getDate();
+        var mm = today.getMonth() + 1; //January is 0!
+        var yyyy = today.getFullYear();
 
-        //var wings = document.getElementsByName("Wings");
-        //var SelectedWings;
-        //for (var i = 0; i < wings.length; i++) {
-        //    if (wings[i].checked) {
-        //        SelectedWings = wings[i].value;
-        //    }
-        //}
-
-        var wings = document.querySelector('input[name="Wings"]:checked').value
-        if (wings != 'yes')
-        {
-            alert('It looks like it is not an insect');
-            return;
+        if (dd < 10) {
+            dd = '0' + dd
         }
 
-        location.href = "/Sighting/Colors";
+        if (mm < 10) {
+            mm = '0' + mm
+        }
+
+        today = yyyy + '-' + mm + '-' + dd;
+        document.getElementById("SeenDate").defaultValue = today;
+    }
+
+    document.getElementById("NextButton").onclick = function () {
+
+
+        var isfuzzy = document.getElementById("true").checked;
+        var notfuzzy = document.getElementById("false").checked;
+        if (!isfuzzy && !notfuzzy)
+        {
+            alert("Was your bee fuzzy? Please select one.");
+        }
+
+        if (isfuzzy)
+        {
+            alert("Fuzzy: " + isfuzzy);
+            // Pass this value to the next page
+            location.href = "/Sighting/Colors";
+        }
+        if (notfuzzy)
+        {
+            location.href = "/Sighting/Colors";
+        }
+
+
     };
 
     document.getElementById("StartOverButton").onclick = function () {

@@ -80,3 +80,12 @@ C:\Users\Crystal\Desktop\College\OIT\Sr. Project\SeniorProject\BeeIdentified\Bee
 C:\Users\Crystal\Desktop\College\OIT\Sr. Project\SeniorProject\BeeIdentified\BeeIdentified\obj\Release\BeeIdentified.csprojResolveAssemblyReference.cache
 C:\Users\Crystal\Desktop\College\OIT\Sr. Project\SeniorProject\BeeIdentified\BeeIdentified\obj\Release\BeeIdentified.dll
 C:\Users\Crystal\Desktop\College\OIT\Sr. Project\SeniorProject\BeeIdentified\BeeIdentified\obj\Release\BeeIdentified.pdb
+C:\Users\Crystal\Desktop\College\OIT\Sr. Project\SeniorProject\BeeIdentified\BeeIdentified\bin\System.Net.Http.Formatting.dll
+C:\Users\Crystal\Desktop\College\OIT\Sr. Project\SeniorProject\BeeIdentified\BeeIdentified\bin\System.Web.Http.dll
+C:\Users\Crystal\Desktop\College\OIT\Sr. Project\SeniorProject\BeeIdentified\BeeIdentified\bin\System.Web.Http.WebHost.dll
+C:\Users\Crystal\Desktop\College\OIT\Sr. Project\SeniorProject\BeeIdentified\BeeIdentified\bin\System.Net.Http.Formatting.xml
+C:\Users\Crystal\Desktop\College\OIT\Sr. Project\SeniorProject\BeeIdentified\BeeIdentified\bin\System.Web.Http.xml
+C:\Users\Crystal\Desktop\College\OIT\Sr. Project\SeniorProject\BeeIdentified\BeeIdentified\bin\System.Web.Http.WebHost.xml
+C:\Users\Crystal\Desktop\College\OIT\Sr. Project\SeniorProject\BeeIdentified\BeeIdentified\obj\Release\BeeIdentified.Migrations.beeinfo.resources
+C:\Users\Crystal\Desktop\College\OIT\Sr. Project\SeniorProject\BeeIdentified\BeeIdentified\obj\Release\BeeIdentified.csproj.GenerateResource.Cache
+C:\Users\Crystal\Desktop\College\OIT\Sr. Project\SeniorProject\BeeIdentified\BeeIdentified\obj\Release\BeeIdentified.Migrations.test1.resources
