@@ -1,61 +1,50 @@
-﻿@model IEnumerable<BeeIdentified.Data.Entities.UserBees>
+﻿@model IEnumerable<BeeIdentified.Data.Entities.HistoryDisplay>
 
 <h2>@ViewBag.Title</h2>
-<form name="useroutput">
-    <p>
-        @*write script to populate data here*@
-        Number of Bees Identified:
-        <output name="BeesIdentified" readonly="true"></output>
-    </p>
 
-    <p>
-        Number of Species Identified:
-        <output name="IdentifiedSpecies"></output>
-    </p>
+@* Maybe make this a nice little table. Or look to see if we have some duplication happening?? *@
+<p>
+    <table class="table">
 
-    <p>
-        Locations:
-        <output name="Locations"> </output>
-    </p>
+        <thead>
+            <tr>
+                <th>
+                    Bee Common Name
+                </th>
+                <th>
+                    Found Location
+                </th>
+        </thead>
 
-    @*<p>
-            Overall Days:
-            <output name="OverallViewDays"></output>
-        </p>*@
+        <tbody>
 
-    @foreach (var item in Model)
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.beeName</td>
+                    <td>@item.location</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</p>
+
+<p>
+    @*buttons for species list, locations, and both*@
+
+    @*Navigation Buttons*@
+
+    <input type="button" value="Discover More Bees" id="NewBeeButton" />
+</p>
+
+<script type="text/javascript">
     {
-        @*<p>
-            @item.UserID
-        </p>*@
-        <p>
-            @item.BeeID
-        </p>
-        <p>
-            @item.Location
-        </p>
-        <p>
-           @*@item*@
-        </p>
-    }
+        //fill in the data from the database for the user.
+    };
 
-    </form>
-    <p>
-        @*buttons for species list, locations, and both*@
-
-        @*Navigation Buttons*@
-
-        <input type="button" value="Discover More Bees" id="NewBeeButton" />
-    </p>
-
-    <script type="text/javascript">
-        {
-            //fill in the data from the database for the user.
-        };
-
-        document.getElementById("NewBeeButton").onclick = function () {
-            location.href = "/Sighting/BasicInfo";
-        };
+    document.getElementById("NewBeeButton").onclick = function () {
+        location.href = "/Sighting/BasicInfo";
+    };
 
 
-    </script>
+</script>

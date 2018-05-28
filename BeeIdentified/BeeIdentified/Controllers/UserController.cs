@@ -3,13 +3,15 @@ using BeeIdentified.Models;
 //using BeeIdentified.Repositories;
 using System.Linq;
 using System.Web.Mvc;
+using Microsoft.AspNet.Identity;
+using System.Collections.Generic;
 
 namespace BeeIdentified.Controllers
 {
     public class UserController : Controller
     {
         private readonly ApplicationDbContext context = new ApplicationDbContext();
-       // private readonly EntityRespository _repo;
+        // private readonly EntityRespository _repo;
         //public UserController(EntityRespository repo)
         //{
         //    _repo = repo;
@@ -21,47 +23,34 @@ namespace BeeIdentified.Controllers
         public ActionResult History()
         {
             ViewBag.Title = "User History";
-            var UserBeeInfo = context.UserBees;
-            
-            // ALMOST works
-            //var userHisotryInfo = (from BD in context.BeeDatas
-            //           join UB in context.UserBees on BD.BeeID equals UB.BeeID
-            //           select new {
-            //               UB.UserID,
-            //               UB.Location,
-            //               UB.BeeID,
-            //               BD. CommonName }).ToList();
-            
-            //var count = 0;
-            //foreach (var Loc in info)
-            //{
-            //    count++; // each UNIQUE Location in collection
-            //}
 
-            return View(UserBeeInfo);
+            var ID = IdentityExtensions.GetUserId(HttpContext.User.Identity);
+            var UserBeeInfo = context.UserBees.Where(u => u.UserID == ID.ToString());
+
+            var beelist = CreateHistoryDisplay(UserBeeInfo.ToList());
+
+            return View(beelist);
+ 
         }
 
-        [Authorize]
-        public ActionResult UserBeeList()   // Explicit list of bee names based on ID for user
+        private List<HistoryDisplay> CreateHistoryDisplay(List<UserBees> thisUsersBees)
         {
-            ViewBag.Title = "User History";
+            var historydisplays = new List<HistoryDisplay>();
 
-            var UserBeeInfo = context.UserBees.ToList();
+           
+            foreach (var bee in thisUsersBees)
+            {
+                var thisbee = context.BeeDatas.SingleOrDefault(m => m.BeeID == bee.BeeID);
 
-            return View(UserBeeInfo);
+                // location, name, number
+                
+                var history = new HistoryDisplay(bee.Location, thisbee.CommonName, 1);
+
+                historydisplays.Add(history);
+            }
+
+            return historydisplays;
         }
-
-        //[Authorize]
-        //[HttpPost]
-        //public ActionResult Create(UserBees userBeeInfo)
-        //{
-        //    if (ModelState.IsValid)
-        //    {
-        //        _repo.SaveUserBee(userBeeInfo);
-        //    }
-
-        //    return RedirectToAction("History", new { UserId = userBeeInfo.UserID });
-        //}
         
     }
 }

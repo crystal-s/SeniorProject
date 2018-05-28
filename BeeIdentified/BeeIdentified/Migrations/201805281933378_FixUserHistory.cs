@@ -3,7 +3,7 @@ namespace BeeIdentified.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class SeedBeeUserInfo : DbMigration
+    public partial class FixUserHistory : DbMigration
     {
         public override void Up()
         {

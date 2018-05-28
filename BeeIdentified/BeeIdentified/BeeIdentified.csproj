@@ -214,6 +214,7 @@
     <Compile Include="Controllers\SightingController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Data\Entities\BeeData.cs" />
+    <Compile Include="Data\Entities\HistoryDisplay.cs" />
     <Compile Include="Data\Entities\UserBees.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -222,13 +223,13 @@
     <Compile Include="Migrations\201804302119039_beeinfo.Designer.cs">
       <DependentUpon>201804302119039_beeinfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201805062010067_SeedBeeUserInfo.cs" />
-    <Compile Include="Migrations\201805062010067_SeedBeeUserInfo.Designer.cs">
-      <DependentUpon>201805062010067_SeedBeeUserInfo.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\201805062300193_ChangeBeeImages.cs" />
     <Compile Include="Migrations\201805062300193_ChangeBeeImages.Designer.cs">
       <DependentUpon>201805062300193_ChangeBeeImages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805281933378_FixUserHistory.cs" />
+    <Compile Include="Migrations\201805281933378_FixUserHistory.Designer.cs">
+      <DependentUpon>201805281933378_FixUserHistory.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -309,6 +310,7 @@
     <Content Include="Views\User\UserBeeList.cshtml" />
     <Content Include="Views\Sighting\BeeInfoPage.cshtml" />
     <Content Include="Views\GenericError.cshtml" />
+    <Content Include="Views\Sighting\CreateUserBee.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -325,11 +327,11 @@
     <EmbeddedResource Include="Migrations\201804302119039_beeinfo.resx">
       <DependentUpon>201804302119039_beeinfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201805062010067_SeedBeeUserInfo.resx">
-      <DependentUpon>201805062010067_SeedBeeUserInfo.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201805062300193_ChangeBeeImages.resx">
       <DependentUpon>201805062300193_ChangeBeeImages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805281933378_FixUserHistory.resx">
+      <DependentUpon>201805281933378_FixUserHistory.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

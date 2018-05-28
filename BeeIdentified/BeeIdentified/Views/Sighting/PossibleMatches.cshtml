@@ -1,9 +1,10 @@
 ﻿@model IEnumerable<BeeIdentified.Data.Entities.BeeData>
 
-<h3>
-    Select an image to get a better view. <br>
-    If nothing looks right, you can edit the selections or start over.
-</h3>
+@*<h3>
+        Select an image to get a better view. <br>
+        If nothing looks right, you can edit the selections or start over.
+    </h3>*@
+<h3>Select a bee to add it to your sighting history or use the buttons at the bottom to go back or start over</h3>
 
 <p>
     @* Bee List *@
@@ -15,9 +16,9 @@
                     This is my Bee!
                 </th>
 
-                <th>
-                    Bee Image
-                </th>
+                @*<th>
+                        Bee Image
+                    </th>*@
 
                 <th>
                     Common Name
@@ -32,27 +33,27 @@
                 </th>
 
                 @*<th>
-                    More Info
-                </th>*@
+                        More Info
+                    </th>*@
         </thead>
         <tbody>
 
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td><input type="button" value="This is My Bee!" id="ThisIsItButton"/></td>  @*Need to have some way to tag this to know which bee this is for*@ 
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td><input type="text" value=@item.BeeID style="display:none"><input type="submit" value="Add to History" class="btn btn-default" /></td>
 
-                <td>@item.Photo</td>
+                    @*<td>@item.Photo</td>*@
 
-                <td>@item.CommonName</td>
+                    <td>@item.CommonName</td>
 
-                <td>@item.LatinName</td>
+                    <td>@item.LatinName</td>
 
-                <td>@item.ConservationStatus</td>
-            </tr>
+                    <td>@item.ConservationStatus</td>
+                </tr>
 
-        }
-            </tbody>
+            }
+        </tbody>
 
     </table>
 </p>

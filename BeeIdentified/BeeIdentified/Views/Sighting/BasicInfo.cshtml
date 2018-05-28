@@ -1,5 +1,5 @@
 ﻿<h3>
-    Let's get some basic preliminary information. This will help us narrow down what you saw.
+    Help us narrow down what you saw
 </h3>
 
 <form>
@@ -13,20 +13,6 @@
             <input type="text" class="form-control" id="SeenLocation">
         </div>
     </p>
-
-    @*<p>
-            Did what you saw have six legs?
-
-            <label class="radio-inline"><input type="radio" name="SixLegs">Yes</label>
-            <label class="radio-inline"><input type="radio" name="SixLegs">No</label>
-        </p>
-
-        <p>
-            Did what you saw have wings?
-
-            <label class="radio-inline"><input type="radio" name="Wings">Yes</label>
-            <label class="radio-inline"><input type="radio" name="Wings">No</label>
-        </p>*@
 
     <p>
         Is it fuzzy?
@@ -42,7 +28,7 @@
     <input type="button" value="Next" id="NextButton" />
 </p>
 
-@* Need script to ensure that all fields are filled out. Need to make sure it's a bee. *@
+@* Need script to ensure that all fields are filled out. *@
 
 <script type="text/javascript">
     function date() {
@@ -83,8 +69,6 @@
         {   // Pass the value to the next page with the date
             location.href = "/Sighting/Colors";
         }
-
-
     };
 
     document.getElementById("StartOverButton").onclick = function () {
