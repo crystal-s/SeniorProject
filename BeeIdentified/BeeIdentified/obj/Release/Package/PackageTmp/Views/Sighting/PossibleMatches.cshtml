@@ -1,32 +1,19 @@
 ﻿@model IEnumerable<BeeIdentified.Data.Entities.BeeData>
-
-<h3>
-    Select an image to get a better view. <br>
-    If nothing looks right, you can edit the selections or start over.
-</h3>
+<h3>Select a bee to add it to your sighting history or use the buttons at the bottom to go back or start over</h3>
 
 <p>
     @* Bee List *@
-
-    @* Image *@
-    @* Latin Name *@
-    @* Common Name *@
-    @* This is my bee -> grab the Location data right now *@
-
-    @* Don't forget to format me in a css file!! *@
     <table class="table">
 
         <thead>
             <tr>
-                <th></th>
-
                 <th>
                     This is my Bee!
                 </th>
 
-                <th>
-                    Bee Image
-                </th>
+                @*<th>
+                        Bee Image
+                    </th>*@
 
                 <th>
                     Common Name
@@ -40,68 +27,62 @@
                     Conservation Status
                 </th>
 
-                <th>
-                    Color One
-                </th>
-
-                <th>
-                    Color Two
-                </th>
-
-                <th>
-                    Color Three
-                </th>
-
-                <th>
-                    Fuzzy?
-                </th>
-                <th>
-                    More Info
-                </th>
+                @*<th>
+                            More Info
+                    </th>*@
         </thead>
         <tbody>
 
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td></td>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        <button type="submit" value=@item.BeeID class="submitbutton">Add To History </button>
+                    </td>
 
-                <td>@item.BeeID</td>
+                    @*<td>
+                            <img src="@Url.Content("~/" + @item.Photo)" width="200" />
+                        </td>*@
 
-                <td>@item.CommonName</td>
+                    <td>@item.CommonName</td>
 
-            </tr>
+                    <td>@item.LatinName</td>
 
-
-        }
-            </tbody>
+                    <td>@item.ConservationStatus</td>
+                </tr>
+            }
+        </tbody>
 
     </table>
-
-
-
 </p>
 
 <p>
     @*Navigation Buttons*@
     <input type="button" value="Start Over" id="StartOverButton" />
-    <input type="button" value="Back" id="BackButton" />
 </p>
 
-<script type="text/javascript">
-    document.getElementById("BackButton").onclick = function () {
-        location.href = "/Sighting/Colors";
-    };
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    jQuery(document).ready(function () {
+        console.log("Document is ready");
+        jQuery('.submitbutton').click(function () {
+            console.log("click");
+        });
+    });
+
 </script>
 
-<script type="text/javascript">
+<script type ="text/javascript">
     document.getElementById("StartOverButton").onclick = function () {
         location.href = "/Sighting/BasicInfo";
     };
+
+    //document.getElementsById("submitbutton").onclick = function () {
+    //    // Get the BeeId for the button we have clicked and insert that into the UserBees Database
+
+
+    //    location.href = "/User/CreateUserBee" + "";
+    //};
+    alert("Something happened!!");
+
 </script>
 
-<script type="text/javascript">
-    document.getElementById("ThisIsItButton").onclick = function () {
-        location.href = "/Sighting/";
-    };
-</script>

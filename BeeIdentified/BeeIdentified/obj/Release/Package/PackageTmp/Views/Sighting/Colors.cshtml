@@ -1,35 +1,56 @@
-﻿
+﻿@model BeeIdentified.Data.Entities.TempBeeBuilder
 <h3>
     Select a few colors that describe the critter you saw. Choose up to 3.
 </h3>
 
-<form name="pickColor">
+<form name="pickColor" method="post">
     <p>
-        <input type="checkbox" name="yellow" value="yellow" />Yellow<br />
-        <input type="checkbox" name="black" value="black" />Black<br />
-        <input type="checkbox" name="white" value="white" />White<br />
-        <input type="checkbox" name="green" value="green" />Green<br />
-        <input type="checkbox" name="blue" value="blue" />Blue<br />
-        <input type="checkbox" name="purple" value="purple" />Purple<br />
-        <input type="checkbox" name="pink" value="pink" />Pink<br />
-        <input type="checkbox" name="red" value="red" />Red<br />
-        <input type="checkbox" name="orange" value="orange" />Orange<br />
+        <select name="colorone">
+            <option value="4"> Yellow</option>
+            <option value="1">Black</option>
+            <option value="2">White</option>
+            <option value="7">Green</option>
+            <option value="6">Blue</option>
+            <option value="9">Purple</option>
+            <option value="3">Brown</option>
+            <option value="8">Red</option>
+            <option value="5">Orange</option>
+        </select>
+
+        <select name="colortwo">
+            <option value="4"> Yellow</option>
+            <option value="1">Black</option>
+            <option value="2">White</option>
+            <option value="7">Green</option>
+            <option value="6">Blue</option>
+            <option value="9">Purple</option>
+            <option value="3">Brown</option>
+            <option value="8">Red</option>
+            <option value="5">Orange</option>
+        </select>
+
+        <select name="colorthree">
+            <option value="4"> Yellow</option>
+            <option value="1">Black</option>
+            <option value="2">White</option>
+            <option value="7">Green</option>
+            <option value="6">Blue</option>
+            <option value="9">Purple</option>
+            <option value="3">Brown</option>
+            <option value="8">Red</option>
+            <option value="5">Orange</option>
+        </select>
+    </p>
+
+    <p>
+        @*Navigation Buttons*@
+        <input type="button" value="Start Over" id="StartOverButton" />
+        <button type="submit" value="Submit" id="NextButton"> Next </button>
     </p>
 </form>
 
-<p>
-    @*Navigation Buttons*@
-    <input type="button" value="Start Over" id="StartOverButton" />
-    <input type="button" value="Back" id="BackButton" />
-    <input type="button" value="Next" id="NextButton" />
-</p>
 
 <script type="text/javascript">
-    document.getElementById("BackButton").onclick = function () {
-        location.href = "/Sighting/BasicInfo";
-    };
-
-
     document.getElementById("StartOverButton").onclick = function () {
         location.href = "/Sighting/BasicInfo";
     };
@@ -70,12 +91,12 @@
             return
         }
 
-    if(count < 1)    {
-        alert('Choose at least 1 color!')
-        return
-    }
+        if (count < 1) {
+            alert('Choose at least 1 color!')
+            return
+        }
 
-    location.href = "/Sighting/PossibleMatches";
+        location.href = "/Sighting/PossibleMatches";
     }
 
 </script>

@@ -1,68 +1,59 @@
-﻿<h3>
-    Let's get some basic preliminary information. This will help us narrow down what you saw.
+﻿
+
+<h3>
+    Help us narrow down what you saw
 </h3>
 
-<form>
+<form method="post">
     <p>
-        <div class="form-group">
-            <label for="SeenDate">Date you saw this:</label>
-            <input type="date" class="form-control" id="SeenDate">
-        </div>
+        @*<div class="form-group">
+                <label for="SeenDate">Date you saw this:</label>
+                <input type="date" class="form-control" name="id"/>
+            </div>*@
         <div class="form-group">
             <label for="SeenLocation">Location you saw this:</label>
-            <input type="text" class="form-control" id="SeenLocation">
+            <input type="text" class="form-control" name="SeenLocation">
         </div>
-    </p>
-
-    <p>
-        Did what you saw have six legs?
-
-        <label class="radio-inline"><input type="radio" name="SixLegs">Yes</label>
-        <label class="radio-inline"><input type="radio" name="SixLegs">No</label>
-    </p>
-
-    <p>
-        Did what you saw have wings?
-
-        <label class="radio-inline"><input type="radio" name="Wings">Yes</label>
-        <label class="radio-inline"><input type="radio" name="Wings">No</label>
     </p>
 
     <p>
         Is it fuzzy?
+        @*<label class="checkbox-inline" id="fuzzybox" input type=""/>*@
+        <select name="isFuzzy">
+            <option value="True">Yes</option>
+            <option value="False">No</option>
+        </select>
+    </p>
 
-        <label class="radio-inline"><input type="radio" name="Fuzzy">Yes</label>
-        <label class="radio-inline"><input type="radio" name="Fuzzy">No</label>
+    <p>
+        @*Navigation Buttons*@
+        <input type="button" value="Start Over" id="StartOverButton" />
+        <button type="submit" value="Submit" id="NextButton"> Next </button>
     </p>
 </form>
 
-<p>
-    @*Navigation Buttons*@
-    <input type="button" value="Start Over" id="StartOverButton" />
-    <input type="button" value="Next" id="NextButton" />
-</p>
-
-@* Need script to ensure that all fields are filled out. Need to make sure it's a bee. *@
-
+@* Need script to ensure that all fields are filled out. *@
 <script type="text/javascript">
+    //function date() {
+    //    var today = new Date();
+    //    var dd = today.getDate();
+    //    var mm = today.getMonth() + 1; //January is 0!
+    //    var yyyy = today.getFullYear();
+
+    //    if (dd < 10) {
+    //        dd = '0' + dd
+    //    }
+
+    //    if (mm < 10) {
+    //        mm = '0' + mm
+    //    }
+
+    //    today = yyyy + '-' + mm + '-' + dd;
+    //    document.getElementById("SeenDate").defaultValue = today;
+    //}
+
     document.getElementById("NextButton").onclick = function () {
 
-        //var wings = document.getElementsByName("Wings");
-        //var SelectedWings;
-        //for (var i = 0; i < wings.length; i++) {
-        //    if (wings[i].checked) {
-        //        SelectedWings = wings[i].value;
-        //    }
-        //}
-
-        var wings = document.querySelector('input[name="Wings"]:checked').value
-        if (wings != 'yes')
-        {
-            alert('It looks like it is not an insect');
-            return;
-        }
-
-        location.href = "/Sighting/Colors";
     };
 
     document.getElementById("StartOverButton").onclick = function () {

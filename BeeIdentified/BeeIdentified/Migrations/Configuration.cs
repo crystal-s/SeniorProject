@@ -37,9 +37,9 @@ namespace BeeIdentified.Migrations
 
                 new BeeData { BeeID = "4", CommonName = "Western Bumblebee", LatinName = "Bombus occidentalis", ConservationStatus = ConservationStatus.Vulnerable, FirstColor = Color.Black, SecondColor = Color.Yellow, ThirdColor = Color.White, Fuzzy = true, Photo = "/Photo/WesternBumbleBee.jpg" },
 
-                new BeeData { BeeID = "5", CommonName = "Mason Bee", LatinName = "Osmia", ConservationStatus = ConservationStatus.DataDeficient, FirstColor = Color.Blue, SecondColor = Color.Green, ThirdColor = Color.Black, Fuzzy = true, Photo = "/Photo/Osmia2.jpg" },
+                new BeeData { BeeID = "5", CommonName = "Mason Bee", LatinName = "Osmia", ConservationStatus = ConservationStatus.DataDeficient, FirstColor = Color.Red, SecondColor = Color.Orange, ThirdColor = Color.Black, Fuzzy = true, Photo = "/Photo/Osmia1.jpg" },
 
-                new BeeData { BeeID = "6", CommonName = "Blue Orchard Mason Bee", LatinName = "Osmia lignaria", ConservationStatus = ConservationStatus.DataDeficient, FirstColor = Color.Black, SecondColor = Color.Blue, Fuzzy = true, Photo = "/Photos/Osmia2.jpg" },
+                new BeeData { BeeID = "6", CommonName = "Blue Orchard Mason Bee", LatinName = "Osmia lignaria", ConservationStatus = ConservationStatus.DataDeficient, FirstColor = Color.Black, SecondColor = Color.Blue, ThirdColor = Color.Green, Fuzzy = true, Photo = "/Photos/Osmia2.jpg" },
 
                 new BeeData { BeeID = "7", CommonName = "Sweat Bee", LatinName = "Lasioglossum", ConservationStatus = ConservationStatus.DataDeficient, FirstColor = Color.Black, SecondColor = Color.Yellow, ThirdColor = Color.Brown, Fuzzy = false },
 
@@ -53,7 +53,7 @@ namespace BeeIdentified.Migrations
 
                 new BeeData { BeeID = "12", CommonName = "Silver-Tailed Petalcutter", LatinName = "Megachile montivaga", ConservationStatus = ConservationStatus.DataDeficient, FirstColor = Color.Black, SecondColor = Color.White, ThirdColor = Color.Yellow, Fuzzy = true },
 
-                new BeeData { BeeID = "13", CommonName = "Cuckoo Bee", LatinName = "Triepeolus concavus", ConservationStatus = ConservationStatus.DataDeficient, FirstColor = Color.Black, SecondColor = Color.Yellow, ThirdColor = Color.Yellow, Fuzzy = false, Photo = "/Photo/Triepeolus Concavus.jpg" }
+                new BeeData { BeeID = "13", CommonName = "Cuckoo Bee", LatinName = "Triepeolus concavus", ConservationStatus = ConservationStatus.DataDeficient, FirstColor = Color.Black, SecondColor = Color.Yellow, ThirdColor = Color.Yellow, Fuzzy = false, Photo = "/Photo/TriepeolusConcavus.jpg" }
 
                 // Template for new seed data
                 //new BeeData { BeeID = "14", CommonName = "", LatinName = "", ConservationStatus = ConservationStatus., FirstColor = Color.Black, SecondColor = Color, ThirdColor = Color, Fuzzy = },

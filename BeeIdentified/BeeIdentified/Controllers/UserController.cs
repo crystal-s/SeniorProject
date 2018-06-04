@@ -36,8 +36,7 @@ namespace BeeIdentified.Controllers
         private List<HistoryDisplay> CreateHistoryDisplay(List<UserBees> thisUsersBees)
         {
             var historydisplays = new List<HistoryDisplay>();
-
-           
+            
             foreach (var bee in thisUsersBees)
             {
                 var thisbee = context.BeeDatas.SingleOrDefault(m => m.BeeID == bee.BeeID);

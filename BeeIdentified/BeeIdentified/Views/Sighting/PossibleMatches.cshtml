@@ -1,9 +1,4 @@
 ﻿@model IEnumerable<BeeIdentified.Data.Entities.BeeData>
-
-@*<h3>
-        Select an image to get a better view. <br>
-        If nothing looks right, you can edit the selections or start over.
-    </h3>*@
 <h3>Select a bee to add it to your sighting history or use the buttons at the bottom to go back or start over</h3>
 
 <p>
@@ -33,17 +28,20 @@
                 </th>
 
                 @*<th>
-                        More Info
+                            More Info
                     </th>*@
         </thead>
         <tbody>
-
             @foreach (var item in Model)
             {
                 <tr>
-                    <td><input type="text" value=@item.BeeID style="display:none"><input type="submit" value="Add to History" class="btn btn-default" /></td>
+                    <td>
+                        <button type="submit" value=@item.BeeID class="submitbutton">Add To History </button>
+                    </td>
 
-                    @*<td>@item.Photo</td>*@
+                    @*<td>
+                            <img src="@Url.Content("~/" + @item.Photo)" width="200" />
+                        </td>*@
 
                     <td>@item.CommonName</td>
 
@@ -51,7 +49,6 @@
 
                     <td>@item.ConservationStatus</td>
                 </tr>
-
             }
         </tbody>
 
@@ -61,23 +58,30 @@
 <p>
     @*Navigation Buttons*@
     <input type="button" value="Start Over" id="StartOverButton" />
-    <input type="button" value="Back" id="BackButton" />
 </p>
 
-<script type="text/javascript">
-    document.getElementById("BackButton").onclick = function () {
-        location.href = "/Sighting/Colors";
-    };
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    jQuery(document).ready(function () {
+        console.log("Document is ready");
+        jQuery('.submitbutton').click(function () {
+            console.log("click");
+        });
+    });
 
+</script>
+
+<script type ="text/javascript">
     document.getElementById("StartOverButton").onclick = function () {
         location.href = "/Sighting/BasicInfo";
     };
 
-    document.getElementById("ThisIsItButton").onclick = function () {
-        // Get the BeeId for the button we have clicked and insert that into the UserBees Database
+    //document.getElementsById("submitbutton").onclick = function () {
+    //    // Get the BeeId for the button we have clicked and insert that into the UserBees Database
 
-        location.href = "/User/History";
-    };
+
+    //    location.href = "/User/CreateUserBee" + "";
+    //};
+    alert("Something happened!!");
 
 </script>
 
