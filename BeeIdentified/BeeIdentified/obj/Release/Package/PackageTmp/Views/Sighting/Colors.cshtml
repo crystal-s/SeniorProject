@@ -6,9 +6,10 @@
 <form name="pickColor" method="post">
     <p>
         <select name="colorone">
-            <option value="4"> Yellow</option>
+            <option value="0">     </option>
             <option value="1">Black</option>
             <option value="2">White</option>
+            <option value="4">Yellow</option>
             <option value="7">Green</option>
             <option value="6">Blue</option>
             <option value="9">Purple</option>
@@ -18,9 +19,10 @@
         </select>
 
         <select name="colortwo">
-            <option value="4"> Yellow</option>
+            <option value="0">     </option>
             <option value="1">Black</option>
             <option value="2">White</option>
+            <option value="4">Yellow</option>
             <option value="7">Green</option>
             <option value="6">Blue</option>
             <option value="9">Purple</option>
@@ -30,9 +32,10 @@
         </select>
 
         <select name="colorthree">
-            <option value="4"> Yellow</option>
+            <option value="0">     </option>
             <option value="1">Black</option>
             <option value="2">White</option>
+            <option value="4">Yellow</option>
             <option value="7">Green</option>
             <option value="6">Blue</option>
             <option value="9">Purple</option>
@@ -56,44 +59,9 @@
     };
 
     document.getElementById("NextButton").onclick = function () {
-        var count = 0
-
-        if (document.pickColor.yellow.checked) {
-            count = count + 1
-        }
-        if (document.pickColor.black.checked) {
-            count = count + 1
-        }
-        if (document.pickColor.white.checked) {
-            count = count + 1
-        }
-        if (document.pickColor.green.checked) {
-            count = count + 1
-        }
-        if (document.pickColor.blue.checked) {
-            count = count + 1
-        }
-        if (document.pickColor.purple.checked) {
-            count = count + 1
-        }
-        if (document.pickColor.pink.checked) {
-            count = count + 1
-        }
-        if (document.pickColor.red.checked) {
-            count = count + 1
-        }
-        if (document.pickColor.orange.checked) {
-            count = count + 1
-        }
-
-        if (count > 3) {
-            alert('Pick up to 3 colors')
-            return
-        }
-
-        if (count < 1) {
-            alert('Choose at least 1 color!')
-            return
+        if (document.pickColor.colorone.value == 0 && document.pickColor.colortwo.value == 0 && document.pickColor.colorthree.value == 0) {
+            alert("Please select at least one color")
+            location.href = "/Sighting/Colors";
         }
 
         location.href = "/Sighting/PossibleMatches";
