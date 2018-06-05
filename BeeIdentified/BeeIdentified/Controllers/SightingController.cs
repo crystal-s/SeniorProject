@@ -30,11 +30,13 @@ namespace BeeIdentified.Controllers
             return RedirectToAction("Colors", "Sighting", BeeBuilder);
         }
 
+        // To display the colors page
         public ActionResult Colors(TempBeeBuilder BeeBuilder)
         {
             return View(BeeBuilder);
         }
 
+        // To navigate from the colors page
         [HttpPost]
         public ActionResult Colors(TempBeeBuilder BeeBuilder, string colorone, string colortwo, string colorthree)
         {
@@ -55,20 +57,12 @@ namespace BeeIdentified.Controllers
             return RedirectToAction("PossibleMatches", "Sighting", BeeBuilder);
         }
 
-        public ActionResult NewSighting()
-        {
-            return View();
-        }
-
-        //public ActionResult Fuzzy()
-        //{
-        //    return View();
-        //}
-
+        // To display 
         public ActionResult PossibleMatches(TempBeeBuilder BeeBuilder)
         {
-            // Find if the colors match
             // Does fuzzy match? 
+            // If at least one color matches, add it to the list to display
+            // Also checks that we are not comparing empty fields
 
             var beeInfo = context.BeeDatas.ToList();
             // Guarantees unique data
@@ -77,15 +71,15 @@ namespace BeeIdentified.Controllers
             {
                 if ((bee.Fuzzy.ToString() == BeeBuilder.Fuzzy))
                 {
-                    if ((bee.FirstColor == BeeBuilder.FirstColor) || (bee.FirstColor == BeeBuilder.SecondColor) || (bee.FirstColor == BeeBuilder.ThirdColor))
+                    if (bee.FirstColor.ToString() != "0" && ((bee.FirstColor == BeeBuilder.FirstColor) || (bee.FirstColor == BeeBuilder.SecondColor) || (bee.FirstColor == BeeBuilder.ThirdColor)))
                     {
                         beesToDisplay.Add(bee);
                     }
-                    if ((bee.SecondColor == BeeBuilder.FirstColor) || (bee.SecondColor == BeeBuilder.SecondColor) || (bee.SecondColor == BeeBuilder.ThirdColor))
+                    if (bee.SecondColor.ToString() != "0" && ((bee.SecondColor == BeeBuilder.FirstColor) || (bee.SecondColor == BeeBuilder.SecondColor) || (bee.SecondColor == BeeBuilder.ThirdColor)))
                     {
                         beesToDisplay.Add(bee);
                     }
-                    if ((bee.ThirdColor == BeeBuilder.FirstColor) || (bee.ThirdColor == BeeBuilder.SecondColor) || (bee.ThirdColor == BeeBuilder.ThirdColor))
+                    if (bee.ThirdColor.ToString() != "0" && ((bee.ThirdColor == BeeBuilder.FirstColor) || (bee.ThirdColor == BeeBuilder.SecondColor) || (bee.ThirdColor == BeeBuilder.ThirdColor)))
                     {
                         beesToDisplay.Add(bee);
                     }
@@ -94,15 +88,39 @@ namespace BeeIdentified.Controllers
             return View(beesToDisplay);
         }
 
-        public ActionResult Create()
+        [HttpPost]
+        public ActionResult PossibleMatches(TempBeeBuilder BeeBuilder, string BeeId)
         {
+            // Navigate to the CreateUserBee page --> eventually cut this out and go directly to the updated User History 
+            BeeBuilder.BeeID = BeeId;
+
+            return RedirectToAction("CreateUserBee", "Sighting", BeeBuilder);
+        }
+
+        //public ActionResult Create()
+        //{
+        //    return View();
+        //}
+
+        public ActionResult CreateUserBee(TempBeeBuilder BeeBuilder)
+        {
+            var userbee = new UserBees();
+
+            var ID = IdentityExtensions.GetUserId(HttpContext.User.Identity);
+            userbee.BeeID = BeeBuilder.BeeID;
+            userbee.Location = BeeBuilder.Location;
+            userbee.UserID = ID;
+
             return View();
         }
 
-        public ActionResult CreateUserBee()
-        {
-            return View();
-        }
+        //[HttpPost]
+        //public ActionResult CreateUserBee()
+        //{
+
+        //    // Navigate to the user history page
+        //    return View();
+        //}
 
         [HttpPost]
         public async Task<ActionResult> CreateUserBee(UserBees userBee)
@@ -124,6 +142,5 @@ namespace BeeIdentified.Controllers
             }
             return View(userBee);
         }
-
     }
 }
