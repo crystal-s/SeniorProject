@@ -91,3 +91,4 @@ C:\Users\Crystal\Desktop\College\OIT\Sr. Project\SeniorProject\BeeIdentified\Bee
 C:\Users\Crystal\Desktop\College\OIT\Sr. Project\SeniorProject\BeeIdentified\BeeIdentified\obj\Release\BeeIdentified.Migrations.ChangeBeeImages.resources
 C:\Users\Crystal\Desktop\College\OIT\Sr. Project\SeniorProject\BeeIdentified\BeeIdentified\obj\Release\BeeIdentified.Migrations.FixUserHistory.resources
 C:\Users\Crystal\Desktop\College\OIT\Sr. Project\SeniorProject\BeeIdentified\BeeIdentified\obj\Release\BeeIdentified.Migrations.UpdateBeeImages.resources
+C:\Users\Crystal\Desktop\College\OIT\Sr. Project\SeniorProject\BeeIdentified\BeeIdentified\obj\Release\BeeIdentified.Migrations.beeimages.resources

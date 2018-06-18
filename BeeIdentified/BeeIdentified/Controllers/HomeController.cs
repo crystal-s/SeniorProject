@@ -30,5 +30,12 @@ namespace BeeIdentified.Controllers
 
             return View();
         }
+
+        public ActionResult PhotoCredit()
+        {
+            ViewBag.Title = "Photo Credit";
+
+            return View();
+        }
     }
 }

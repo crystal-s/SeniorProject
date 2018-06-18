@@ -3,7 +3,7 @@
 
 <p>
     @* Bee List *@
-    <table class="table">
+    <table class="table" @*method="post"*@>
 
         <thead>
             <tr>
@@ -11,9 +11,9 @@
                     This is my Bee!
                 </th>
 
-                @*<th>
-                        Bee Image
-                    </th>*@
+                <th>
+                    Bee Image
+                </th>
 
                 <th>
                     Common Name
@@ -26,22 +26,21 @@
                 <th>
                     Conservation Status
                 </th>
-
-                @*<th>
-                            More Info
-                    </th>*@
+            </tr>
         </thead>
+
         <tbody>
             @foreach (var item in Model)
             {
                 <tr>
                     <td>
-                        <button type="submit" value=@item.BeeID class="submitbutton">Add To History </button>
+                        <button type="submit" value=@item.BeeID class="submitbutton">Add To History</button>
                     </td>
 
-                    @*<td>
-                            <img src="@Url.Content("~/" + @item.Photo)" width="200" />
-                        </td>*@
+                    <td>
+
+                        <img src="@Url.Content(@item.Photo)" width="200px" />
+                    </td>
 
                     <td>@item.CommonName</td>
 
@@ -58,21 +57,36 @@
 <p>
     @*Navigation Buttons*@
     <input type="button" value="Start Over" id="StartOverButton" />
+    @*Photo Credit  *@
+    <input type="button" value="View Photo Credit" id="CreditButton" />
+
 </p>
 
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
-    jQuery(document).ready(function () {
-        console.log("Document is ready");
-        jQuery('.submitbutton').click(function () {
-            console.log("click");
-        });
-    });
+@*<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+            jQuery(document).ready(function () {
+                console.log("Document is ready");
+                jQuery('.submitbutton').click(function () {
+                    console.log("click");
+                });
+            });
+    </script>*@
 
-</script>
-
-<script type ="text/javascript">
+<script type="text/javascript">
     document.getElementById("StartOverButton").onclick = function () {
         location.href = "/Sighting/BasicInfo";
+    };
+
+    var buttons = document.getElementsByClassName('submitbutton');
+
+    for (var i = 0; i < buttons.length; i++) {
+        buttons[i].onclick = function () {
+            console.log(this.id)
+            location.href = "/Sighting/CreateUserBee"
+        };
+    }
+
+    document.getElementById("CreditButton").onclick = function () {
+        location.href = "/Home/PhotoCredit";
     };
 
     //document.getElementsById("submitbutton").onclick = function () {
@@ -81,7 +95,5 @@
 
     //    location.href = "/User/CreateUserBee" + "";
     //};
-    //alert("Something happened!!");
 
 </script>
-

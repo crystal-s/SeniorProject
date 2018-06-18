@@ -236,6 +236,10 @@
     <Compile Include="Migrations\201805282227186_UpdateBeeImages.Designer.cs">
       <DependentUpon>201805282227186_UpdateBeeImages.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806182217141_beeimages.cs" />
+    <Compile Include="Migrations\201806182217141_beeimages.Designer.cs">
+      <DependentUpon>201806182217141_beeimages.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -250,6 +254,17 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Photos\Andrena_astragali.jpg" />
+    <Content Include="Photos\Andrena_nivalis.jpg" />
+    <Content Include="Photos\Bombus.jpg" />
+    <Content Include="Photos\Bombus1.jpg" />
+    <Content Include="Photos\Bombus2.jpg" />
+    <Content Include="Photos\Bombus_melanopygus.jpg" />
+    <Content Include="Photos\Bombus_vosnesenkii.jpg" />
+    <Content Include="Photos\Halictus.jpg" />
+    <Content Include="Photos\Lasioglossum.jpg" />
+    <Content Include="Photos\Megachile_montivaga.jpg" />
+    <Content Include="Photos\Megachile_perihirta.jpg" />
     <Content Include="Photos\Osmia1.jpg" />
     <Content Include="Photos\Osmia2.jpg" />
     <Content Include="Photos\TriepeolusConcavus.jpg" />
@@ -316,6 +331,7 @@
     <Content Include="Views\Sighting\BeeInfoPage.cshtml" />
     <Content Include="Views\GenericError.cshtml" />
     <Content Include="Views\Sighting\CreateUserBee.cshtml" />
+    <Content Include="Views\Home\PhotoCredit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -340,6 +356,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201805282227186_UpdateBeeImages.resx">
       <DependentUpon>201805282227186_UpdateBeeImages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806182217141_beeimages.resx">
+      <DependentUpon>201806182217141_beeimages.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

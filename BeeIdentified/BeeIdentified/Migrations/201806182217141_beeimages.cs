@@ -1,8 +1,9 @@
 namespace BeeIdentified.Migrations
 {
+    using System;
     using System.Data.Entity.Migrations;
     
-    public partial class FixUserHistory : DbMigration
+    public partial class beeimages : DbMigration
     {
         public override void Up()
         {
